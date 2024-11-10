@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flow+Circular&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+body {
+  background-color: black;
+  color: white;
+
+}
+
+.header {
+  padding: 10px 5px 5px 5px;
+  background-color: #1DB954; /* Spotify green */
+}
+
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  width: 25vw;
+  display: flex;
+  margin-right: 7px;
+  padding: 10px;
+  height: 87vh;
+  align-items: flex-start; /* Align items to the top */
+  flex-direction: column; /* Stack items vertically */
+  overflow-y: auto;
+}
+
+.right {
+  width: 75vw;
+  display: flex;
+  min-height: 300px;
+  margin-right: 2px;
+  align-items: flex-start; /* Align items to the top */
+  flex-direction: column; /* Stack items vertically */
+  position: relative ;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+  position: absolute;
+  bottom: 38px;
+  width: 9cm;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.playbar {
+  position: absolute;
+  bottom: 2px;
+  right: 8px;
+  left: 5px;
+  background-color:grey;
+  width: calc(100% - 10px);
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.seekbar {
+  height: 5px;
+  width: 96%;
+  background-color: rgba(198, 202, 206, 0.639);  /* Ensures the seekbar is visible */
+  border-radius: 20px;
+  position: absolute;
+  bottom: 5px;           /* Adjust position as needed */
+  left: 20px;
+}
+.circle{
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  background-color: rgb(242, 233, 233);
+  position: relative;
+  bottom: 5px;
+  left: 0%;
+  transition: left 0.5s;
+}
+
+.songbuttons{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Container for the song list */
+.songList{
+  max-height: 355px;        /* Restrict height to allow scrolling */
+  overflow-y: auto;         /* Enable vertical scrolling for .songList */
+  overflow-x: auto;       /* Prevent horizontal scrolling */
+  margin-top: 100px;
+  margin-left: 10px;       /* Optional: space it out from the library */
+  border-radius: 8px;
+  box-sizing: border-box; 
+}
+.songList ul li {
+  display: flex;              /* Arrange elements horizontally */
+  gap: 5px;                  /* Space between items */
+  overflow-x: 70px;
+  cursor: pointer;           /* Cursor pointer on hover */
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid white;
+  border-radius: 15px;
+  align-items: center;        /* Align items vertically */
+  width: auto;                /* Ensure the list items take up the full width */
+  max-width: 500px;           /* Optional: maximum width */
+  justify-content: space-between; /* Distribute space evenly between items */
+  max-width: 50cm;
+  box-sizing: border-box;
+}
+
+/* Ensure the image and play button are the same size */
+.songList img {
+  width: 40px;
+  height: 40px;               /* Set a fixed size for images */
+  object-fit: cover;          /* Ensure images are scaled properly */
+  margin-right: 10px;         /* Add space between image and text */
+}
+
+/* Container for song name and artist */
+.info {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; /* Stack the song name and artist vertically */
+  justify-content: center;
+  align-items: flex-start;  /* Align text to the left */
+  flex-grow: 1;             /* Ensure it takes up available space */
+  transition: all 0.3s ease;
+}
+.info:hover{
+  text-decoration: underline; /* Underline the text on hover */
+  text-underline-position: above; /* Position the underline above the text */
+  color: #FFD700; 
+}
+
+
+/* Ensure 'Play Now' section aligns properly */
+.playnow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure 'Play Now' span text has a consistent size */
+.playnow span {
+  font-size: 12px;
+  padding: 5px 12px;
+  text-align: center;
+  min-width: 100px;          /* Ensure play button section is large enough */
+}
+.playnow span:hover{
+  background-color: #333;
+}
